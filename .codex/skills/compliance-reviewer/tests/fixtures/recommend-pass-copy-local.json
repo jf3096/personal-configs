@@ -1,0 +1,17 @@
+{
+  "task_goal": "调整最终交付文案表达",
+  "change_objects": [
+    "other"
+  ],
+  "change_summary": "只修改最终回复文案，不改 hook、规则或验证脚本",
+  "executed_commands": [
+    "cat /tmp/response-draft.txt"
+  ],
+  "existing_evidence": [
+    "文案已审阅"
+  ],
+  "risk_points": [
+    "文案可能不够清晰"
+  ],
+  "impact_scope": "local"
+}

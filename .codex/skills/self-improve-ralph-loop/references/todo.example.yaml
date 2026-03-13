@@ -1,0 +1,18 @@
+todo_id: playbook-loop-smoke
+loop_rounds: 4
+continue_on_failure: true
+selection_policy: highest_priority_pending
+completion_policy:
+  mode: all_enabled_cases_passed
+  completion_promise: DONE
+items:
+  - case_id: case-positive-structure
+    enabled: true
+    stability_runs: 3
+    stability_pass_threshold: 3
+    max_attempts: 0
+  - case_id: case-negative-guardrail
+    enabled: true
+    stability_runs: 1
+    stability_pass_threshold: 1
+    max_attempts: 0

@@ -1,0 +1,4 @@
+interface:
+  display_name: "PSD to HTML"
+  short_description: "Build psd CLI commands with smart defaults"
+  default_prompt: "Use $psd-2-html to precheck psd CLI, complete missing args, and confirm before running."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Skill Evolver"
+  short_description: "Run rehearsal-to-evolution loops for any skill"
+  default_prompt: "Use this skill to ask rehearsal inputs, execute, compare outcomes, and evolve target skill rules with evidence."

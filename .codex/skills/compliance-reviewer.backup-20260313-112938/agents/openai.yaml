@@ -1,0 +1,3 @@
+interface:
+  display_name: "Compliance Reviewer"
+  short_description: "Gate completion claims with verification evidence"

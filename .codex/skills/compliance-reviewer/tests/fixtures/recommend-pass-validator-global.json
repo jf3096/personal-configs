@@ -1,0 +1,19 @@
+{
+  "task_goal": "调整 compliance-reviewer validator 的默认阻断逻辑",
+  "change_objects": [
+    "validator_script",
+    "template"
+  ],
+  "change_summary": "修改 validate 脚本和模板，改变默认阻断条件与提示结果",
+  "executed_commands": [
+    "python3 validate.py --workspace /tmp/sample"
+  ],
+  "existing_evidence": [
+    "正例样本通过",
+    "负例样本被阻断"
+  ],
+  "risk_points": [
+    "阻断条件变化会影响多个任务的默认判断结果"
+  ],
+  "impact_scope": "global-verdict-changing"
+}

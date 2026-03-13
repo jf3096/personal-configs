@@ -1,0 +1,4 @@
+interface:
+  display_name: "Planning Loop Orchestrator"
+  short_description: "4-step planning loop with A/B/C options and progress reflection"
+  default_prompt: "Use this skill when the user says 策划 or asks to plan first. Provide A/B/C options, enforce 1)需求 2)路径 3)结果 4)验收, and maintain progress.txt with loop-back decisions."

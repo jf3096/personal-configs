@@ -1,0 +1,10 @@
+{
+  "status": "pass",
+  "test_evidence": [
+    "pytest /home/jf3096/.codex/skills/compliance-reviewer/tests/test_hook_rules.py -q -> 23 passed"
+  ],
+  "run_evidence": [
+    "bash /home/jf3096/.codex/skills/compliance-reviewer/run-compliance-tests.sh --core-only -> 40 passed"
+  ],
+  "summary": "high-risk strict revalidation completed"
+}

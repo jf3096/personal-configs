@@ -1,0 +1,59 @@
+{
+  "skill_name": "self-improve-init",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "$self-improve:init",
+      "expected_output": "The first substantive reply should present two entry options: 自述 baseline and 含糊 baseline 创作模式.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "我已经知道 baseline 大概要怎么做了，帮我落成 prd、artifact、benchmark。",
+      "expected_output": "Recommend 自述 baseline mode, keep the user as the primary source of truth, and only use brainstorming for light boundary correction.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "我只想拿到 bilibili.com 热搜榜结果，但我并不知道 baseline 该怎么设计。",
+      "expected_output": "Recommend 含糊 baseline 创作模式, use brainstorming to shape the goal, and use web research when current site facts matter before drafting a recommended baseline.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "workspace 用默认值。我要做一个每周抓取 bestblogs.dev 精选内容的 baseline。",
+      "expected_output": "As soon as workspace and minimal business goal are known, create draft files immediately, fill unknown sections with 待确认, and continue with the smallest missing field.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "baseline 已经可用了，但我现在还没准备好真实运行环境。",
+      "expected_output": "Treat the real run review as optional, mark it as skipped with a reason, and do not block baseline completion.",
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "baseline 已经可用了，我同意做一次真实 run 复核，而且环境已经准备好。",
+      "expected_output": "Allow one optional real run review, write evidence under <workspace>/evidence/, and backfill the three baseline docs using real observations.",
+      "files": []
+    },
+    {
+      "id": 7,
+      "prompt": "我选含糊 baseline 创作模式。你先帮我起草一版 baseline。",
+      "expected_output": "After drafting a recommended baseline, explicitly mark it as a draft and require the user to confirm, modify, or reject it before treating it as final.",
+      "files": []
+    },
+    {
+      "id": 8,
+      "prompt": "这版推荐 baseline 我只想保留输出是 Markdown，其他执行路径你重起一版。",
+      "expected_output": "Respect the user's right to modify or reject the drafted baseline, regenerate the draft, and do not write it as final until the user confirms.",
+      "files": []
+    },
+    {
+      "id": 9,
+      "prompt": "我选含糊 baseline 创作模式。你先帮我起草一版 baseline。",
+      "expected_output": "While the draft status is 待用户确认, the assistant must end the turn by asking only for draft confirmation/modification/restart, and must not pivot to workspace or later missing fields.",
+      "files": []
+    }
+  ]
+}

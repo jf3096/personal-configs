@@ -1,0 +1,21 @@
+version: 1
+suite_name: playbook-loop
+cases:
+  - id: case-positive-structure
+    title: positive structure case
+    type: positive
+    priority: high
+    spec_file: cases/case-positive-example.md
+    enabled: true
+    tags:
+      - playbook
+      - structure
+  - id: case-negative-guardrail
+    title: negative guardrail case
+    type: negative
+    priority: medium
+    spec_file: cases/case-negative-example.md
+    enabled: true
+    tags:
+      - playbook
+      - guardrail

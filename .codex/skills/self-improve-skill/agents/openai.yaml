@@ -1,0 +1,4 @@
+spec_version: v1
+display_name: "Self Improve Skill"
+short_description: "需求澄清 + expectation/acceptance 对齐 + 自动迭代评分闭环"
+default_prompt: "Use this skill when the user asks for an iterative self-improvement workflow. Always collect requirements first, write/update .self-improve-skill/{summary_a_name}/prd.md, clarify until scope is explicit, confirm expectations and acceptance, then ask max loops and target score before running loop commands and recording each iteration result."

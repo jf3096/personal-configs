@@ -1,0 +1,17 @@
+{
+  "task_goal": "更新 compliance-reviewer 的 skill 文档说明",
+  "change_objects": [
+    "skill"
+  ],
+  "change_summary": "修改 SKILL.md 中关于推荐门禁的说明文字，不改变 hook 判断逻辑",
+  "executed_commands": [
+    "sed -n 1,200p /home/jf3096/.codex/skills/compliance-reviewer/SKILL.md"
+  ],
+  "existing_evidence": [
+    "文档 diff 已检查"
+  ],
+  "risk_points": [
+    "文档说明与实际行为可能不一致"
+  ],
+  "impact_scope": "local"
+}
