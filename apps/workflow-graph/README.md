@@ -6,4 +6,4 @@
 - Usage: `docs/usage/workflow-graph-skill.md`
 
 ## Skill Location
-- Codex Skill: `.codex/skills/workflow-graph/SKILL.md`
+- Codex Skill: `../../.codex/skills/workflow-graph/SKILL.md`

@@ -14,7 +14,7 @@
 
 **Files:**
 - Create: `package.json`
-- Create: `.codex/skills/workflow-graph/.gitkeep`
+- Create: `../../.codex/skills/workflow-graph/.gitkeep`
 - Create: `tests/workflow-graph/.gitkeep`
 - Test: `node --test`
 
@@ -55,14 +55,14 @@ Expected: PASS (0 tests) or PASS summary with exit code 0.
 **Step 5: Commit**
 
 ```bash
-git add package.json .codex/skills/workflow-graph/.gitkeep tests/workflow-graph/.gitkeep
+git add package.json ../../.codex/skills/workflow-graph/.gitkeep tests/workflow-graph/.gitkeep
 git commit -m "chore: bootstrap workflow-graph skill workspace"
 ```
 
 ### Task 2: Define skill contract (`简版`/`详细版` + auto mode)
 
 **Files:**
-- Create: `.codex/skills/workflow-graph/SKILL.md`
+- Create: `../../.codex/skills/workflow-graph/SKILL.md`
 - Create: `tests/workflow-graph/skill-contract.test.mjs`
 - Test: `tests/workflow-graph/skill-contract.test.mjs`
 
@@ -75,7 +75,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 
 test('SKILL contract includes required Chinese mode keywords', async () => {
-  const text = await readFile('.codex/skills/workflow-graph/SKILL.md', 'utf8');
+  const text = await readFile('../../.codex/skills/workflow-graph/SKILL.md', 'utf8');
   assert.match(text, /简版/);
   assert.match(text, /详细版/);
   assert.match(text, /用户未声明时.*自动判断/);
@@ -90,7 +90,7 @@ Expected: FAIL (`ENOENT` for missing `SKILL.md`).
 
 **Step 3: Write minimal implementation**
 
-`.codex/skills/workflow-graph/SKILL.md` must include:
+`../../.codex/skills/workflow-graph/SKILL.md` must include:
 - Purpose and supported scenarios (GitLab repo summary / code structure / skill mechanism)
 - Output structure: tree diagram + `::` line explanation
 - Mode rules: `简版`, `详细版`
@@ -106,15 +106,15 @@ Expected: PASS.
 **Step 5: Commit**
 
 ```bash
-git add .codex/skills/workflow-graph/SKILL.md tests/workflow-graph/skill-contract.test.mjs
+git add ../../.codex/skills/workflow-graph/SKILL.md tests/workflow-graph/skill-contract.test.mjs
 git commit -m "feat: define workflow-graph skill contract and mode policy"
 ```
 
 ### Task 3: Add compact/detailed rendering templates
 
 **Files:**
-- Create: `.codex/skills/workflow-graph/templates/compact-tree.template.md`
-- Create: `.codex/skills/workflow-graph/templates/detailed-tree.template.md`
+- Create: `../../.codex/skills/workflow-graph/templates/compact-tree.template.md`
+- Create: `../../.codex/skills/workflow-graph/templates/detailed-tree.template.md`
 - Create: `tests/workflow-graph/template-shape.test.mjs`
 - Test: `tests/workflow-graph/template-shape.test.mjs`
 
@@ -127,13 +127,13 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 
 test('compact template has node-line explanation format', async () => {
-  const text = await readFile('.codex/skills/workflow-graph/templates/compact-tree.template.md', 'utf8');
+  const text = await readFile('../../.codex/skills/workflow-graph/templates/compact-tree.template.md', 'utf8');
   assert.match(text, /\(1\).*::/);
   assert.doesNotMatch(text, /\[1\.1\]/);
 });
 
 test('detailed template includes sub-points and loop reference', async () => {
-  const text = await readFile('.codex/skills/workflow-graph/templates/detailed-tree.template.md', 'utf8');
+  const text = await readFile('../../.codex/skills/workflow-graph/templates/detailed-tree.template.md', 'utf8');
   assert.match(text, /\[1\.1\]/);
   assert.match(text, /\[LOOP L1 -> \(1\)\]/);
 });
@@ -157,7 +157,7 @@ Expected: PASS.
 **Step 5: Commit**
 
 ```bash
-git add .codex/skills/workflow-graph/templates tests/workflow-graph/template-shape.test.mjs
+git add ../../.codex/skills/workflow-graph/templates tests/workflow-graph/template-shape.test.mjs
 git commit -m "feat: add compact and detailed tree templates"
 ```
 
